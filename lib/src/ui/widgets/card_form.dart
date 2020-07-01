@@ -22,7 +22,9 @@ class CardForm extends StatefulWidget {
       this.cardNumberErrorText,
       this.cardExpiryErrorText,
       this.cardCvcErrorText,
-      this.cardDecoration})
+      this.cardDecoration,
+      this.cardWidth,
+      this.cardHeight})
       : this.card = card ?? StripeCard(),
         this.formKey = formKey ?? GlobalKey(),
         super(key: key);
@@ -39,6 +41,9 @@ class CardForm extends StatefulWidget {
   final String cardExpiryErrorText;
   final String cardCvcErrorText;
   final Decoration cardDecoration;
+  final double cardWidth;
+  final double cardHeight;
+
   @override
   _CardFormState createState() => _CardFormState();
 }
@@ -68,6 +73,8 @@ class _CardFormState extends State<CardForm> {
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: CreditCard(
+                width: widget.cardWidth,
+                height: widget.cardHeight,
                 cardNumber: _validationModel.number ?? "",
                 cardExpiry: cardExpiry,
                 cvv: _validationModel.cvc ?? "",
