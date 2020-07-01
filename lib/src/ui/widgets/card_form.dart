@@ -88,6 +88,7 @@ class _CardFormState extends State<CardForm> {
                 backBackground: CardBackgrounds.white,
                 showBackSide: cvcHasFocus,
                 showShadow: true,
+                cardHolderName: widget.card.name,
               ),
             ),
             Form(
