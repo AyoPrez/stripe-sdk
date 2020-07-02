@@ -70,7 +70,7 @@ class _CardFormState extends State<CardForm> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /*Padding(
+            Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: CreditCard(
                 width: widget.cardWidth,
@@ -90,7 +90,7 @@ class _CardFormState extends State<CardForm> {
                 showShadow: true,
                 cardHolderName: widget.card.name,
               ),
-            ),*/
+            ),
             Form(
               key: widget.formKey,
               child: Padding(

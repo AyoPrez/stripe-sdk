@@ -11,9 +11,11 @@ packages:
   awesome_card:
     dependency: transitive
     description:
-      name: awesome_card
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "0898c6a08b06c6053a32ba4ae49f91427b1bba05"
+      url: "https://github.com/AyoPrez/AwesomeCard.git"
+    source: git
     version: "1.1.0"
   boolean_selector:
     dependency: transitive
