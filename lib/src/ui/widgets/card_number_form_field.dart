@@ -28,16 +28,6 @@ class CardNumberFormField extends StatefulWidget {
   static const defaultHintText = 'xxxx xxxx xxxx xxxx';
   static const defaultErrorText = 'Número de tarjeta no válido';
 
-  static String getDefaultLabelText(String language) {
-    return language == "es" ? 'Número de tarjeta' : 'Card number';
-  }
-  static String getDefaultHintText(String language) {
-    return 'xxxx xxxx xxxx xxxx';
-  }
-  static String getDefaultErrorText(String language) {
-    return language == "es" ? 'Número de tarjeta no valido' : 'Invalid card number';
-  }
-
   static const defaultDecoration = InputDecoration(
     border: OutlineInputBorder(),
     labelText: defaultLabelText,

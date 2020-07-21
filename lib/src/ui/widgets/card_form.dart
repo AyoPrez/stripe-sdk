@@ -64,7 +64,7 @@ class _CardFormState extends State<CardForm> {
     var cardExpiry = widget.language == "es" ? "MM/AA" : "MM/YY";
     if (_validationModel.expMonth != null) {
       cardExpiry =
-          "${_validationModel.expMonth}/${_validationModel.expYear ?? widget.language == "es" ? 'AA' : 'YY'}";
+          "${_validationModel.expMonth}/${_validationModel.expYear ?? 'AA'}";
     }
 
     return SingleChildScrollView(
