@@ -100,7 +100,7 @@ class _LoadStuffButtonState extends State<LoadStuffButton> {
         child: Opacity(
           opacity: ani.get(_AniProps.opacity),
           child: Text(
-            "Load Stuff",
+            "Cargar...",
             style: TextStyle(color: Colors.white, fontSize: 16),
           ),
         ),
@@ -145,7 +145,7 @@ class _LoadStuffButtonState extends State<LoadStuffButton> {
               child: Opacity(
                   opacity: value.get(_AniProps.opacity),
                   child: Text(
-                    "Success",
+                    "Éxito",
                     style: TextStyle(color: Colors.green.shade800, fontSize: 16),
                   )),
             ),

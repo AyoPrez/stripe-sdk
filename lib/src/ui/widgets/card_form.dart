@@ -24,7 +24,8 @@ class CardForm extends StatefulWidget {
       this.cardCvcErrorText,
       this.cardDecoration,
       this.cardWidth,
-      this.cardHeight})
+      this.cardHeight,
+      this.language})
       : this.card = card ?? StripeCard(),
         this.formKey = formKey ?? GlobalKey(),
         super(key: key);
@@ -43,6 +44,7 @@ class CardForm extends StatefulWidget {
   final Decoration cardDecoration;
   final double cardWidth;
   final double cardHeight;
+  final String language; //es||en
 
   @override
   _CardFormState createState() => _CardFormState();
@@ -59,10 +61,10 @@ class _CardFormState extends State<CardForm> {
 
   @override
   Widget build(BuildContext context) {
-    var cardExpiry = "MM/YY";
+    var cardExpiry = widget.language == "es" ? "MM/AA" : "MM/YY";
     if (_validationModel.expMonth != null) {
       cardExpiry =
-          "${_validationModel.expMonth}/${_validationModel.expYear ?? 'YY'}";
+          "${_validationModel.expMonth}/${_validationModel.expYear ?? widget.language == "es" ? 'AA' : 'YY'}";
     }
 
     return SingleChildScrollView(

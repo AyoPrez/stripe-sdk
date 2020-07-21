@@ -24,9 +24,9 @@ class CardExpiryFormField extends StatefulWidget {
   final void Function(int, int) onChanged;
   final String Function(String) validator;
 
-  static const defaultLabelText = "Expiration Date";
-  static const defaultHintText = "MM/YY";
-  static const defaultErrorText = "Invalid expiration date";
+  static const defaultLabelText = "Fecha de expiración";
+  static const defaultHintText = "MM/AA";
+  static const defaultErrorText = "Fecha de expiración no válida";
   static const defaultMonthMask = "##";
   static const defaultYearMask = "##";
 

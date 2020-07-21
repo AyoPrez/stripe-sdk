@@ -20,7 +20,7 @@ class CardCvcFormField extends StatefulWidget {
   final void Function(String) onChanged;
   final String Function(String) validator;
 
-  static const defaultErrorText = "Invalid CVV";
+  static const defaultErrorText = "CVV no válido";
   static const defaultDecoration = InputDecoration(
       border: OutlineInputBorder(), labelText: "CVV", hintText: "XXX");
   static const defaultTextStyle = TextStyle(color: Colors.black);

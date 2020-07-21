@@ -11,7 +11,8 @@ class CardNumberFormField extends StatefulWidget {
       this.onChanged,
       this.decoration = defaultDecoration,
       this.textStyle = defaultTextStyle,
-      this.textEditingController})
+      this.textEditingController,
+      this.language})
       : super(key: key);
 
   final void Function(String) onSaved;
@@ -21,10 +22,21 @@ class CardNumberFormField extends StatefulWidget {
   final InputDecoration decoration;
   final TextStyle textStyle;
   final TextEditingController textEditingController;
+  final String language;
 
-  static const defaultLabelText = 'Card number';
+  static const defaultLabelText = 'Número de tarjeta';
   static const defaultHintText = 'xxxx xxxx xxxx xxxx';
-  static const defaultErrorText = 'Invalid card number';
+  static const defaultErrorText = 'Número de tarjeta no válido';
+
+  static String getDefaultLabelText(String language) {
+    return language == "es" ? 'Número de tarjeta' : 'Card number';
+  }
+  static String getDefaultHintText(String language) {
+    return 'xxxx xxxx xxxx xxxx';
+  }
+  static String getDefaultErrorText(String language) {
+    return language == "es" ? 'Número de tarjeta no valido' : 'Invalid card number';
+  }
 
   static const defaultDecoration = InputDecoration(
     border: OutlineInputBorder(),
