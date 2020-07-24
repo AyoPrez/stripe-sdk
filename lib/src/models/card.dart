@@ -147,7 +147,7 @@ class StripeCard {
       'card': {
         'number': number,
         'cvc': cvc,
-        'exp_mont': expMonth,
+        'exp_month': expMonth,
         'exp_year': expYear,
       },
     };
