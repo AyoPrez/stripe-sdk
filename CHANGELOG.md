@@ -1,6 +1,26 @@
 # Stripe SDK Changelog
 
-## 2.8.2
+## 3.0.0
+
+* Added Support for custom decorations in card form
+* Updated default stripe api version to `2020-03-02`
+
+### Breaking changes
+* Removed `Card.toMap()`
+* Removed support for non-card properties on Card (billing details)
+  * See https://github.com/ezet/stripe-sdk/issues/61#issuecomment-662657924 
+* Rename `confirmSetupIntentWithPaymentMethod` to `confirmSetupIntent` as this is the default, general case.
+* Rename `confirmSetupIntent` to `authenticateSetupIntent` so it aligns more with `authenticatePaymentIntent`, as they share similar behavior.
+* Make `returnUrlForSca` a required parameter for Stripe
+
+#### Removed following deprecated functions and classes
+* class: CardNumberFormatter
+* constructor: CustomerSession
+* Stripe.getReturnUrl
+* Stripe.handlePaymentIntent
+* Stripe.handleSetupIntent
+
+ ## 2.8.2
 
 * Updated readme
 * Updated uni_links
